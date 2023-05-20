@@ -10,13 +10,13 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace JustinWritesCode;
+namespace Dgmjr.PersonalInformation.Enums;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
 /// The gender enum.
 /// </summary>
-[GenerateEnumerationRecordStruct("Gender", "JustinWritesCode")]
+[GenerateEnumerationRecordStruct("Gender", "Dgmjr.PersonalInformation")]
 public enum GenderEnum
 {
     [Display(Name = "None")]
