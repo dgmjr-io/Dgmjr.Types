@@ -9,13 +9,13 @@
 //   Copyright © 2022-2023 David G. Mooore, Jr., All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
 //
-namespace Dgmjr.Enums.SoftwareLicenses;
+namespace Dgmjr.Dgmjr.Software.Licensing.Enums;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
 /// Contains the permissions granted by a software license.
 /// </summary>
-[GenerateEnumerationRecordStruct("LicensePermission")]
+[GenerateEnumerationRecordStruct("LicensePermission", "Dgmjr.Software.Licensing")]
 public enum LicensePermissionEnum
 {
     [Display(Name = "No Permission", ShortName = "none")]
