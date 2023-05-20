@@ -1,4 +1,4 @@
-namespace Dgmjr.Enums;
+namespace System.Globalization.Enums;
 using System.ComponentModel.DataAnnotations;
 
 [GenerateEnumerationRecordStruct]
