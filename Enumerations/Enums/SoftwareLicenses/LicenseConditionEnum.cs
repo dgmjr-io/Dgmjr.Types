@@ -9,13 +9,13 @@
 //   Copyright © 2022-2023 David G. Mooore, Jr., All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
 //
-namespace Dgmjr.Enums.SoftwareLicenses;
+namespace Dgmjr.Software.Licensing.Enums;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
 /// Contains the conditions under which a software license may be issued.
 /// </summary>
-[GenerateEnumerationRecordStruct("LicenseCondition")]
+[GenerateEnumerationRecordStruct("LicenseCondition", "Dgmjr.Software.Licensing")]
 public enum LicenseConditionEnum
 {
     [Display(Name = "No Conditions", ShortName = "No Conditions")]
