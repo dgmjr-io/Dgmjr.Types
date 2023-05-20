@@ -10,7 +10,7 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace Dgmjr.Enums;
+namespace Dgmjr.Software.Licensing;
 
 
 
