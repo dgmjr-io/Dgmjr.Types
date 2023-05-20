@@ -1,7 +1,7 @@
 namespace System.Globalization.Enums;
 using System.ComponentModel.DataAnnotations;
 
-[GenerateEnumerationRecordStruct]
+[GenerateEnumerationClass("LanguageCodeCulture", "System.Globalization")]
 public enum LanguageCodeEnum
 {
     /// <summary>
