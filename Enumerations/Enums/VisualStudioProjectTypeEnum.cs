@@ -10,7 +10,7 @@
 //      License: MIT (https://opensource.org/licenses/MIT)
 //
 
-namespace Dgmjr.Enums;
+namespace Microsoft.VisualStudio.Projects.Enums;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Dgmjr.s;
