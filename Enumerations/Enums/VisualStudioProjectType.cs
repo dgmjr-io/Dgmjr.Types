@@ -10,7 +10,7 @@
 //      License: MIT (https://opensource.org/licenses/MIT)
 //
 
-namespace Dgmjr.Enums;
+namespace Microsoft.VisualStudio.Projects;
 
 public partial record struct VisualStudioProjectType //: Enumerations.Enumeration<VisualStudioProjectTypeEnumeration, VisualStudioProjectType>
 {
