@@ -10,7 +10,7 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace Dgmjr.Dgmjr.Software.Licensing.Enums;
+namespace Dgmjr.Software.Licensing.Enums;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
