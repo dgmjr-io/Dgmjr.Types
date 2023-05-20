@@ -10,13 +10,13 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace Dgmjr.Enums;
+namespace Dgmjr.Dgmjr.Software.Licensing.Enums;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
 /// Contains the software licenses available on GitHub.
 /// </summary>
-[GenerateEnumerationRecordStruct("SoftwareLicense")]
+[GenerateEnumerationRecordStruct("SoftwareLicense", "Dgmjr.Software.Licensing")]
 public enum SoftwareLicenseEnum
 {
 
