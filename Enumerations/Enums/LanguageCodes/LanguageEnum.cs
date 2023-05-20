@@ -1,7 +1,7 @@
-namespace Dgmjr.Enums;
+namespace System.Globalization.Enums;
 using System.ComponentModel.DataAnnotations;
 
-[GenerateEnumerationRecordStruct]
+[GenerateEnumerationRecordStruct("Language")]
 public enum LanguageEnum
 {
     /// <summary>
