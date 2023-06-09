@@ -1,17 +1,18 @@
 ---
+
 authors:
-  - dgmjr
+- dgmjr
 title: README.md
 lastmod: 2023-03-24-05:52:46
 license: MIT
 keywords:
-  - DGMJR-IO
+- DGMJR-IO
 tags:
-  - DGMJR-IO
+- DGMJR-IO
 categories:
-  - DGMJR-IO
+- DGMJR-IO
 date: 2023-06-09T04:05:42.571Z
----
+------------------------------
 
 # Dgmjr.Types
 
