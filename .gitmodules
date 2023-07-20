@@ -1,9 +1,6 @@
 [submodule "InterfaceGenerator"]
 	path = InterfaceGenerator
 	url = https://github.com/dgmjr-io/InterfaceGenerator.git
-[submodule "Enumerations/Enums/MimeTypes"]
-	path = Enumerations/Enums/MimeTypes
-	url = https://github,com/dgmjr-io/MimeTypes.git
 [submodule "Extensions"]
 	path = Extensions
 	url = https://github.com/dgmjr-io/Dgmjr.System.Extensions.git
@@ -16,6 +13,9 @@
 [submodule "Primitives"]
 	path = Primitives
 	url = https://github.com/dgmjr-io/Primitives.git
-[submodule "Enumerations/CodeGenerator"]
-	path = Enumerations/CodeGenerator
-	url = https://github.com/dgmjr-io/EnumCodeGenerator.git
+[submodule "Abstractions"]
+	path = Abstractions
+	url = https://github.com/dgmjr-io/Abstractions.git
+[submodule "Enumerations"]
+	path = Enumerations
+	url = https://github.com/dgmjr-io/Enumerations.git
