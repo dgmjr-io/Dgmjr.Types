@@ -13,21 +13,17 @@ namespace System.ComponentModel.DataAnnotations;
 /// <summary>
 /// Attribute to store a custom value for an enum member.
 /// </summary>
-public class EnumValueAttribute : Attribute
-{
-    /// <summary>
-    /// Initializes a new instance of the <see cref="EnumValueAttribute"/> class with a string value.
-    /// </summary>
-    /// <param name="value">The custom value to be associated with the enum member.</param>
-    public EnumValueAttribute(string value)
-    {
-        Value = value;
-    }
+public class EnumValueAttribute : Attribute {
+  /// <summary>
+  /// Initializes a new instance of the <see cref="EnumValueAttribute"/> class
+  /// with a string value.
+  /// </summary>
+  /// <param name="value">The custom value to be associated with the enum
+  /// member.</param>
+  public EnumValueAttribute(string value) { Value = value; }
 
-    /// <summary>
-    /// Gets the custom value associated with the enum member.
-    /// </summary>
-    public string Value {
-        get;
-    }
+  /// <summary>
+  /// Gets the custom value associated with the enum member.
+  /// </summary>
+  public string Value { get; }
 }

@@ -15,24 +15,24 @@ namespace System.ComponentModel.DataAnnotations;
 /// <summary>
 /// A class that represents a Guid attribute.
 /// </summary>
-public sealed class GuidAttribute : ValueAttribute<Guid>
-{
-    /// <summary>
-    /// Initializes a new instance of the <see cref="GuidAttribute"/> class
-    /// using the specified string representation of a GUID.
-    /// </summary>
-    /// <param name="guid">A string representation of a GUID.</param>
-    public GuidAttribute(string guid) : this(Guid.Parse(guid)) { }
+public sealed class GuidAttribute : ValueAttribute<Guid> {
+  /// <summary>
+  /// Initializes a new instance of the <see cref="GuidAttribute"/> class
+  /// using the specified string representation of a GUID.
+  /// </summary>
+  /// <param name="guid">A string representation of a GUID.</param>
+  public GuidAttribute(string guid) : this(Guid.Parse(guid)) {}
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="GuidAttribute"/> class
-    /// using the specified GUID value.
-    /// </summary>
-    /// <param name="guid">A GUID value.</param>
-    public GuidAttribute(Guid guid) : base(guid) { }
+  /// <summary>
+  /// Initializes a new instance of the <see cref="GuidAttribute"/> class
+  /// using the specified GUID value.
+  /// </summary>
+  /// <param name="guid">A GUID value.</param>
+  public GuidAttribute(Guid guid) : base(guid) {}
 
-    /// <summary>
-    /// Gets the GUID value represented by the current <see cref="GuidAttribute"/>.
-    /// </summary>
-    public Guid Guid => Value;
+  /// <summary>
+  /// Gets the GUID value represented by the current <see
+  /// cref="GuidAttribute"/>.
+  /// </summary>
+  public Guid Guid => Value;
 }

@@ -3,10 +3,12 @@ namespace System.ComponentModel.DataAnnotations;
 // /// <summary>
 // /// For marking an item with a file extension.
 // /// </summary>
-// [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = true)]
-// public sealed class FileExtensionAttribute : ValueAttribute<string[]>
+// [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited =
+// true)] public sealed class FileExtensionAttribute : ValueAttribute<string[]>
 // {
-//     public FileExtensionAttribute(params string[] extensions) : base((extensions.Select(extension => (!extension.StartsWith(".") ? "." : "") + extension)).ToArray()) { }
+//     public FileExtensionAttribute(params string[] extensions) :
+//     base((extensions.Select(extension => (!extension.StartsWith(".") ? "." :
+//     "") + extension)).ToArray()) { }
 
 //     /// <summary>
 //     /// The extensions with the leading dot.
