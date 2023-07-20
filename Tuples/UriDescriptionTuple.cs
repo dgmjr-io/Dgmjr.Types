@@ -40,7 +40,7 @@ public abstract class UriDescriptionTuple : UriStringTuple
     public static implicit operator string?(UriDescriptionTuple tuple) => tuple.Uri;
     public static implicit operator uri?(UriDescriptionTuple tuple) => tuple.Uri;
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         return obj is UriDescriptionTuple tuple &&
             base.Equals(obj) &&

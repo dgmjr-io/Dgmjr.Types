@@ -42,7 +42,7 @@ public abstract class UriStringTuple : Tuple<uri?, string?>
     /// </summary>
     protected UriStringTuple() : this(null as uri, null as string) { }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         return obj is UriStringTuple tuple &&
             Uri == tuple.Uri &&
