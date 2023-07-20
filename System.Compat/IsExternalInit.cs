@@ -10,9 +10,10 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace System.Runtime.CompilerServices {
-/// <summary>
-/// Allows the use of the <c>init</c> accessor on record properties.
-/// </summary>
-public static class IsExternalInit {}
+namespace System.Runtime.CompilerServices
+{
+    /// <summary>
+    /// Allows the use of the <c>init</c> accessor on record properties.
+    /// </summary>
+    public static class IsExternalInit { }
 }
