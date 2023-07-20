@@ -1,11 +1,11 @@
-/* 
+/*
  * IsExternalInit.cs
- * 
+ *
  *   Created: 2023-06-16-04:53:02
  *   Modified: 2023-06-16-04:53:02
- * 
+ *
  *   Author: David G. Moore, Jr. <david@dgmjr.io>
- *   
+ *
  *   Copyright © 2022 - 2023 David G. Moore, Jr., All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */

@@ -32,7 +32,8 @@ public sealed class GuidAttribute : ValueAttribute<Guid>
     public GuidAttribute(Guid guid) : base(guid) { }
 
     /// <summary>
-    /// Gets the GUID value represented by the current <see cref="GuidAttribute"/>.
+    /// Gets the GUID value represented by the current <see
+    /// cref="GuidAttribute"/>.
     /// </summary>
     public Guid Guid => Value;
 }

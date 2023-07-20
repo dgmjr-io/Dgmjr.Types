@@ -1,19 +1,21 @@
 ---
 
 authors:
+
 - dgmjr
-project: Dgmjr.Types
-title: README.md
-lastmod: 2023-03-24-05:52:46
-created: 2023-03-24-05:52:46
-license: MIT
-keywords:
+  project: Dgmjr.Types
+  title: README.md
+  lastmod: 2023-03-24-05:52:46
+  created: 2023-03-24-05:52:46
+  license: MIT
+  keywords:
 - DGMJR-IO
-tags:
+  tags:
 - DGMJR-IO
-categories:
+  categories:
 - DGMJR-IO
-----------
+
+---
 
 # Microsoft.Net.Global.Json
 
