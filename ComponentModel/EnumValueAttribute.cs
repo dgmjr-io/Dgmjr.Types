@@ -1,11 +1,11 @@
-/* 
+/*
  * EnumValueAttribute.cs
- * 
+ *
  *   Created: 2023-04-01-03:29:38
  *   Modified: 2023-04-01-03:29:38
- * 
+ *
  *   Author: David G. Moore, Jr. <david@dgmjr.io>
- *   
+ *
  *   Copyright © 2022 - 2023 David G. Moore, Jr., All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
@@ -27,5 +27,7 @@ public class EnumValueAttribute : Attribute
     /// <summary>
     /// Gets the custom value associated with the enum member.
     /// </summary>
-    public string Value { get; }
+    public string Value {
+        get;
+    }
 }

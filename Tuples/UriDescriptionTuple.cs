@@ -43,11 +43,11 @@ public abstract class UriDescriptionTuple : UriStringTuple
     public override bool Equals(object? obj)
     {
         return obj is UriDescriptionTuple tuple &&
-            base.Equals(obj) &&
-            System.Collections.Generic.EqualityComparer<uri?>.Default.Equals(Item1, tuple.Item1) &&
-            Item2 == tuple.Item2 &&
-            System.Collections.Generic.EqualityComparer<uri?>.Default.Equals(Uri, tuple.Uri) &&
-            Description == tuple.Description;
+               base.Equals(obj) &&
+               System.Collections.Generic.EqualityComparer<uri?>.Default.Equals(Item1, tuple.Item1) &&
+               Item2 == tuple.Item2 &&
+               System.Collections.Generic.EqualityComparer<uri?>.Default.Equals(Uri, tuple.Uri) &&
+               Description == tuple.Description;
     }
 
     public override int GetHashCode()

@@ -2,7 +2,7 @@ using System;
 namespace System.ComponentModel.DataAnnotations;
 
 /// <summary>
-/// Attribute that stores an array of synonyms for a given value. 
+/// Attribute that stores an array of synonyms for a given value.
 /// </summary>
 [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface, AllowMultiple = false)]
 public sealed class SynonymsAttribute : ValueAttribute<string[]>

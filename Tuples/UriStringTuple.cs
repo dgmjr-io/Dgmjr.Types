@@ -45,8 +45,8 @@ public abstract class UriStringTuple : Tuple<uri?, string?>
     public override bool Equals(object? obj)
     {
         return obj is UriStringTuple tuple &&
-            Uri == tuple.Uri &&
-            Item2 == tuple.Item2;
+               Uri == tuple.Uri &&
+               Item2 == tuple.Item2;
     }
 
     public override int GetHashCode()

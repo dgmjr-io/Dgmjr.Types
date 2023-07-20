@@ -25,5 +25,7 @@ public abstract class ValueAttribute<T> : Attribute
     /// <summary>
     /// Gets the value of the attribute.
     /// </summary>
-    public T Value { get; }
+    public T Value {
+        get;
+    }
 }
