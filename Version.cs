@@ -1,6 +1,6 @@
 namespace Microsoft.Net.Global;
 
-[RegexDtoAttribute("(?<Major:int>\\d+)\\.(?<Minor:int>\\d+)\\.(?<Build:int>\\d+)(\\.(?<Revision:int>\\d+))?(?<Suffix>-.+)?(\\+(?<Metadata>.+))?")]
+[RegexDto("(?<Major:int>\\d+)\\.(?<Minor:int>\\d+)\\.(?<Build:int>\\d+)(\\.(?<Revision:int>\\d+))?(?<Suffix>-.+)?(\\+(?<Metadata>.+))?")]
 public partial record struct Version
 {
     public Version(System.Version sysVersion)

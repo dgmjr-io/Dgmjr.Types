@@ -13,11 +13,10 @@
 namespace Microsoft.Net.Global;
 
 
-public class Sdk
+public record struct Sdk
 {
-    public Sdk() { }
     [JProp("version")]
     public Version? Version { get; set; } = null;
-    [JProp("versions")]
-    public IDictionary<string, Version> Versions { get; set; } = new Dictionary<string, Version>();
+    [JProp("msbuild-sdks")]
+    public IDictionary<string, Version> MSBuildSdks { get; set; } = new Dictionary<string, Version>();
 }

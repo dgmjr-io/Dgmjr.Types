@@ -9,7 +9,6 @@ using SyVersion = System.Version;
 
 public record struct Json
 {
-    public Json() { }
     [JProp("sdk")]
     public Sdk? Sdk { get; set; } = null;
     [JProp("msbuild-sdks")]
