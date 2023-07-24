@@ -1,12 +1,13 @@
 ---
+
 authors:
-  - dgmjr
+- dgmjr
 date: 2023-07-20T07:59:29.564Z
 description: This package contains a couple of tuple values which I may or may not use in the future.
 keywords:
-  - data-types
-  - tuples
-  - types
+- data-types
+- tuples
+- types
 lastmod: 2023-07-20T08:03:54.083Z
 license: MIT
 project: types
@@ -14,11 +15,11 @@ slug: tuples
 title: Tuples
 type: readme
 version: 0.0.1
----
+--------------
 
 # Tuples
 
-This package contains a couple of tuple values which I may or may not use in the future. 
+This package contains a couple of tuple values which I may or may not use in the future.
 
 ## [UriDescriptionTuple](https://github.com/dgmjr-io/Dgmjr.Types/blob/main/Tuples/UriDescriptionTuple.cs)
 
