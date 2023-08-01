@@ -7,6 +7,9 @@ using static System.String;
 using SyVersion = System.Version;
 
 
+/// <summary>
+/// JSON schema for the .NET global configuration file
+/// </summary>
 public record struct Json
 {
     public Json() { }

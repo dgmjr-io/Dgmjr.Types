@@ -1,6 +1,6 @@
 namespace Microsoft.Net.Global;
 
-[RegexDtoAttribute("(?<Major:int>\\d+)\\.(?<Minor:int>\\d+)\\.(?<Build:int>\\d+)(\\.(?<Revision:int>\\d+))?(?<Suffix>-.+)?(\\+(?<Metadata>.+))?")]
+[RegexDto("(?<Major:int>\\d+)\\.(?<Minor:int>\\d+)\\.(?<Build:int>\\d+)(\\.(?<Revision:int>\\d+))?(?:-(?<Suffix>.+))?(\\+(?<Metadata>.+))?")]
 public partial record struct Version
 {
     public Version(System.Version sysVersion)
@@ -19,7 +19,17 @@ public partial record struct Version
         this.Revision = revision;
     }
 
-    public bool IsPreRelease => !IsNullOrWhiteSpace(this.Suffix);
+    public Version(int major, int minor, int build, int revision, string suffix, string metadata)
+    {
+        this.Major = major;
+        this.Minor = minor;
+        this.Build = build;
+        this.Revision = revision;
+        this.Suffix = suffix;
+        this.Metadata = metadata;
+    }
+
+    public readonly bool IsPreRelease => !IsNullOrWhiteSpace(this.Suffix);
 
     public static implicit operator Version(System.Version sysVersion) => new(sysVersion);
     public static implicit operator System.Version(Version version) => new(version.Major, version.Minor, version.Build, version.Revision);

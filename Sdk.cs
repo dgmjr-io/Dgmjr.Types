@@ -12,12 +12,26 @@
 
 namespace Microsoft.Net.Global;
 
-
-public class Sdk
+public record struct Sdk
 {
     public Sdk() { }
     [JProp("version")]
     public Version? Version { get; set; } = null;
     [JProp("versions")]
     public IDictionary<string, Version> Versions { get; set; } = new Dictionary<string, Version>();
+
+    /// <summary>
+    /// Specify information about the SDK
+    /// </summary>
+    [JProp("description"), JIgnore(Condition = JIgnoreCond.WhenWritingNull)]
+    public string Description { get; set; }
+
+    [JProp("allowPrerelease")]
+    public bool AllowPrerelease { get; set; } = true;
+
+    /// <summary>
+    /// <inhertitdoc cref="Microsoft.Net.Global.RollForward" path="/summary" />
+    /// </summary>
+    [JProp("rollForward"), System.Text.Json.Serialization.]
+    public RollForward RollForward { get; set; } = RollForward.Disable;
 }
