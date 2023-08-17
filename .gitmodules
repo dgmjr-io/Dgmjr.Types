@@ -19,3 +19,6 @@
 [submodule "Primitives"]
 	path = Primitives
 	url = https://github.com/dgmjr-io/Primitives.git
+[submodule "RegexDtoGenerator"]
+	path = RegexDtoGenerator
+	url = https://github.com/dgmjr-io/RegexDtoGenerator.git
