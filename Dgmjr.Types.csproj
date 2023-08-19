@@ -1,16 +1,17 @@
 <!--
  * Dgmjr.Types.csproj
- * 
+ *
  *   Created: 2023-06-18-09:50:16
  *   Modified: 2023-06-18-09:50:16
- * 
+ *
  *   Author: David G. Moore, Jr. <david@dgmjr.io>
- *   
+ *
  *   Copyright © 2022 - 2023 David G. Moore, Jr., All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
 <Project Sdk="Microsoft.NET.Sdk">
+    <Sdk Name="MetapackageSdk" />
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
     </PropertyGroup>
