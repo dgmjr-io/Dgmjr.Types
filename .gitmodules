@@ -10,9 +10,6 @@
 [submodule "RegexDtoGenerator"]
 	path = RegexDtoGenerator
 	url = https://github.com/dgmjr-io/RegexDtoGenerator.git
-[submodule "Microsoft.Net.Global.Json"]
-	path = Microsoft.Net.Global.Json
-	url = https://github.com/dgmjr-io/Microsoft.Net.Global.Json.git
 [submodule "Enumerations"]
 	path = Enumerations
 	url = https://github.com/dgmjr-io/Enumerations.git
@@ -22,3 +19,6 @@
 [submodule "InterfaceGenerator"]
 	path = InterfaceGenerator
 	url = https://github.com/dgmjr-io/InterfaceGenerator.git
+[submodule "Microsoft.Net.Global.Json"]
+	path = Microsoft.Net.Global.Json
+	url = https://github.com/dgmjr-io/Microsoft.Net.Global.Json.git
