@@ -14,5 +14,4 @@ public enum RollForward
     LatestFeature,
     LatestMinor,
     LatestMajor,
-
 }
