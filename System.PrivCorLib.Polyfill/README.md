@@ -1,4 +1,5 @@
 ---
+
 title: System.Compat
 lastmod: 2023-10-08T13:33:00.0000Z
 date: 2023-10-08T13:33:00.000Z
@@ -13,7 +14,7 @@ keywords:
 - dgmjr
 - dgmjr-io
 type: readme
----
+------------
 
 # System.PrivCorLib.Polyfill
 
