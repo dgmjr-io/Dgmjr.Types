@@ -4,7 +4,7 @@ namespace System.Diagnostics.CodeAnalysis;
 internal sealed class SetsRequiredMembersAttribute(params string[] members) : Attribute
 {
     public SetsRequiredMembersAttribute()
-        : this(null) { }
+        : this(null as string[]) { }
 
     public SetsRequiredMembersAttribute(string members)
         : this(new[] { members }) { }
