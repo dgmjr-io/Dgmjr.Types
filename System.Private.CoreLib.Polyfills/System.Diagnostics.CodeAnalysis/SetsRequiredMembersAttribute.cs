@@ -6,6 +6,6 @@ internal sealed class SetsRequiredMembersAttribute(params string[] members) : At
     public SetsRequiredMembersAttribute()
         : this(null as string[]) { }
 
-    public SetsRequiredMembersAttribute(string members)
-        : this(new[] { members }) { }
+public SetsRequiredMembersAttribute(string members)
+    : this(new[] { members }) { }
 }
