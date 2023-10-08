@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" />
+    <Using Include="System.Runtime.CompilerServices" />
+  </ItemGroup>
+</Project>
