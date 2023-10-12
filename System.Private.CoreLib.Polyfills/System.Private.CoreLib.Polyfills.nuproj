@@ -4,7 +4,7 @@
         <Description>This is a **source code only** package that provides several classes that for some reasons aren't provided by .NET.</Description>
     </PropertyGroup>
     <ItemGroup>
-      <PackageFile Include="./**/*.cs" PackagePath="ContentFiles/%(RecursiveDir)%(Filename)%(Extension)" Condition="!$(DeclareConstants.Contains('NET7_0_OR_GREATER'))" />
+      <PackageFile Include="./**/*.cs" PackagePath="ContentFiles/%(RecursiveDir)%(Filename)%(Extension)" />
       <PackageFile Include="README.md" PackagePath="%(Filename)%(Extension)" />
     </ItemGroup>
 </Project>

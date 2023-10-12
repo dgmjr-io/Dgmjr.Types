@@ -1,12 +1,17 @@
-namespace System.Runtimw.CompilerServices;
+namespace System.Runtime.CompilerServices;
 
 /// <summary>
 /// Indicates that compiler support for a particular feature is required for the location where this attribute is applied.
 /// </summary>
 [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
-internal sealed class CompilerFeatureRequiredAttribute(string? name) : Attribute
+internal sealed class CompilerFeatureRequiredAttribute(string? featureName, bool isOptional)
+    : Attribute
 {
-    public CompilerFeatureRequiredAttribute() : this(null) { }
+    public CompilerFeatureRequiredAttribute(string? featureName)
+        : this(featureName, false) { }
+
+    public CompilerFeatureRequiredAttribute()
+        : this(null) { }
 
     /// <summary>
     /// The <see cref="FeatureName"/> used for the ref structs C# feature.
@@ -21,7 +26,7 @@ internal sealed class CompilerFeatureRequiredAttribute(string? name) : Attribute
     /// <summary>
     /// The name of the compiler feature.
     /// </summary>
-    public string FeatureName { get; } = name;
+    public string FeatureName { get; } = featureName;
 
     /// <summary>
     /// If <see langword="true" />, the compiler can choose to allow access to the location where this attribute is applied if it does not understand <see cref="FeatureName"/>.

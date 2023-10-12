@@ -1,6 +1,6 @@
 <Project>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="!$(DeclareConstants.Contains('NET7_0_OR_GREATER'))" />
     <Using Include="System.Runtime.CompilerServices" />
   </ItemGroup>
 </Project>
