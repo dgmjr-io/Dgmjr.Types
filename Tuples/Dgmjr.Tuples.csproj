@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;net8.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dgmjr.Primitives" />
+    <PackageReference Include="Dgmjr.System.Extensions" Condition="'$(TargetFramework)' != 'netstandard2.0'"/>
+    <PackageReference Remove="Dgmjr.System.Extensions" Condition="'$(TargetFramework)' == 'netstandard2.0'"/>
+  </ItemGroup>
+</Project>
