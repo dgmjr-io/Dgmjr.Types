@@ -4,5 +4,9 @@
         "activityBar.background": "#5B1207",
         "titleBar.activeBackground": "#80190A",
         "titleBar.activeForeground": "#FFFCFB"
+    },
+    "sonarlint.connectedMode.project": {
+        "connectionId": "dgmjr-io",
+        "projectKey": "dgmjr-io_Dgmjr.Types"
     }
 }

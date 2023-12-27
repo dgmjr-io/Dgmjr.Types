@@ -8,7 +8,7 @@
     <DefineConstants Condition="!$(DeclareConstants.Contains('NETSTANDARD2_1_OR_GREATER'))">$(DefineConstants);NOT_NETSTANDARD2_1_OR_GREATER</DefineConstants>
   </PropertyGroup> -->
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="!$(DefineConstants.Contains('NET7_0_OR_GREATER')) And '$(MSBuildProjectName)' != 'System.Private.CoreLib.Polyfills'" />
+    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="!$(DefineConstants.Contains('NET7_0_OR_GREATER'))" />
     <Compile Remove="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="$(DefineConstants.Contains('NET7_0_OR_GREATER'))" />
     <Using Include="System.Runtime.CompilerServices" />
     <Using Include="System.Diagnostics.CodeAnalysis.StringSyntaxAttribute" Alias="StringSyntax" />
