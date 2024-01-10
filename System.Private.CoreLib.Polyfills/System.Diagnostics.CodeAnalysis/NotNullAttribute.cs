@@ -20,8 +20,8 @@ internal sealed class NotNullAttribute() : Attribute
     public NotNullAttribute(bool returnValue)
         : this() => ReturnValue = returnValue;
 
-    /// <summary>
-    /// Gets the return value condition.
-    /// </summary>
-    public bool ReturnValue { get; }
+/// <summary>
+/// Gets the return value condition.
+/// </summary>
+public bool ReturnValue { get; }
 }
