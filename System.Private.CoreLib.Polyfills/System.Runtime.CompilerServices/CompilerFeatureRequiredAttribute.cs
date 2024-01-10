@@ -4,6 +4,7 @@ namespace System.Runtime.CompilerServices;
 /// Indicates that compiler support for a particular feature is required for the location where this attribute is applied.
 /// </summary>
 [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
+[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNET70ORGREATER)]
 internal sealed class CompilerFeatureRequiredAttribute(string? featureName, bool isOptional)
     : Attribute
 {

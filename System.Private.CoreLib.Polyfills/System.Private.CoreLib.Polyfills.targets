@@ -7,10 +7,30 @@
     <DefineConstants Condition="!$(DeclareConstants.Contains('NETSTANDARD2_0_OR_GREATER'))">$(DefineConstants);NOT_NETSTANDARD2_0_OR_GREATER</DefineConstants>
     <DefineConstants Condition="!$(DeclareConstants.Contains('NETSTANDARD2_1_OR_GREATER'))">$(DefineConstants);NOT_NETSTANDARD2_1_OR_GREATER</DefineConstants>
   </PropertyGroup> -->
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="!$(DefineConstants.Contains('NET7_0_OR_GREATER'))" />
-    <Compile Remove="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="$(DefineConstants.Contains('NET7_0_OR_GREATER'))" />
+  <ItemGroup Condition="'$(MSBuildProjectName)' != 'System.Private.CoreLib.Polyfills'">
+    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Link="Polyfills/%(Filename)%(Extension)" Pack="false" />
     <Using Include="System.Runtime.CompilerServices" />
     <Using Include="System.Diagnostics.CodeAnalysis.StringSyntaxAttribute" Alias="StringSyntax" />
   </ItemGroup>
+
+  <UsingTask TaskName="CheckForDuplicateItems" AssemblyFile="$(MicrosoftNETBuildTasksAssembly)" />
+
+  <Target Name="RemoveSystemPrivateCoreLibFilesFromPackage" BeforeTargets="GetPackageContents;CheckForDuplicateItems">
+
+    <CheckForDuplicateItems
+      Items="@(Compile)"
+      ItemName="Compile"
+      DefaultItemsEnabled="$(EnableDefaultItems)"
+      DefaultItemsOfThisTypeEnabled="$(EnableDefaultCompileItems)"
+      PropertyNameToDisableDefaultItems="EnableDefaultCompileItems"
+      MoreInformationLink="https://aka.ms/sdkimplicititems/(NETStandard.Library)/Compile"
+      ContinueOnError="true">
+      <Output TaskParameter="DeduplicatedItems" ItemName="DeduplicatedCompileItems" />
+    </CheckForDuplicateItems>
+
+    <ItemGroup>
+      <Compile Remove="@(Compile)" />
+      <Compile Include="@(DeduplicatedCompileItems)" />
+    </ItemGroup>
+  </Target>
 </Project>

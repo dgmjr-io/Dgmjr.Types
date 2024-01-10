@@ -8,7 +8,7 @@
     <PackageFile Include="./**/*.cs" Except="$(IntermediateOutputPath)**/*.cs" PackagePath="ContentFiles/%(RecursiveDir)%(Filename)%(Extension)" />
     <PackageFile Include="README.md" PackagePath="%(Filename)%(Extension)" />
     <PackageFile Remove="$(IntermediateOutputPath)**/*" />
-    <Compile Remove="@Compile)" />
+    <Compile Remove="@(Compile)" />
   </ItemGroup>
   <!-- Dont' do this one -->
   <Target Name="SourceFilesProjectOutputGroup" />

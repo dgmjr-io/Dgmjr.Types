@@ -1,6 +1,6 @@
 namespace System.Diagnostics.CodeAnalysis;
 
-[System.AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false, Inherited = false)]
+[global::System.AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false, Inherited = false)]
 internal sealed class SetsRequiredMembersAttribute(params string[] members) : Attribute
 {
     public string[] Members { get; } = members;

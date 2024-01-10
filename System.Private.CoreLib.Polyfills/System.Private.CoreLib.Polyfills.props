@@ -1,15 +1,14 @@
 <Project>
-  <!-- <PropertyGroup>
-    <DefineConstants Condition="!$(DeclareConstants.Contains('NET8_0_OR_GREATER'))">$(DefineConstants);NOT_NET8_0_OR_GREATER</DefineConstants>
-    <DefineConstants Condition="!$(DeclareConstants.Contains('NET7_0_OR_GREATER'))">$(DefineConstants);NOT_NET7_0_OR_GREATER</DefineConstants>
-    <DefineConstants Condition="!$(DeclareConstants.Contains('NET6_0_OR_GREATER'))">$(DefineConstants);NOT_NET6_0_OR_GREATER</DefineConstants>
-    <DefineConstants Condition="!$(DeclareConstants.Contains('NETSTANDARD'))">$(DefineConstants);NOT_NETSTANDARD</DefineConstants>
-    <DefineConstants Condition="!$(DeclareConstants.Contains('NETSTANDARD2_0_OR_GREATER'))">$(DefineConstants);NOT_NETSTANDARD2_0_OR_GREATER</DefineConstants>
-    <DefineConstants Condition="!$(DeclareConstants.Contains('NETSTANDARD2_1_OR_GREATER'))">$(DefineConstants);NOT_NETSTANDARD2_1_OR_GREATER</DefineConstants>
-  </PropertyGroup> -->
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="!$(DefineConstants.Contains('NET7_0_OR_GREATER')) And '$(MSBuildProjectName)' != 'System.Private.CoreLib.Polyfills'" />
-    <Compile Remove="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Condition="$(DefineConstants.Contains('NET7_0_OR_GREATER'))" />
+  <PropertyGroup>
+    <DefineConstants Condition="!$(DefineConstants.Contains('NET8_0_OR_GREATER'))">$(DefineConstants);NOTNET80ORGREATER</DefineConstants>
+    <DefineConstants Condition="!$(DefineConstants.Contains('NET7_0_OR_GREATER'))">$(DefineConstants);NOTNET70ORGREATER</DefineConstants>
+    <DefineConstants Condition="!$(DefineConstants.Contains('NET6_0_OR_GREATER'))">$(DefineConstants);NOTNET60ORGREATER</DefineConstants>
+    <DefineConstants Condition="!$(DefineConstants.Contains('NETSTANDARD'))">$(DefineConstants);NOT_NETSTANDARD</DefineConstants>
+    <DefineConstants Condition="!$(DefineConstants.Contains('NETSTANDARD2_0_OR_GREATER'))">$(DefineConstants);NOTNETSTANDARD20ORGREATER</DefineConstants>
+    <DefineConstants Condition="!$(DefineConstants.Contains('NETSTANDARD2_1_OR_GREATER'))">$(DefineConstants);NOTNETSTANDARD21ORGREATER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(MSBuildProjectName)' != 'System.Private.CoreLib.Polyfills'">
+    <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Link="Polyfills/%(Filename)%(Extension)" Pack="false" />
     <Using Include="System.Runtime.CompilerServices" />
     <Using Include="System.Diagnostics.CodeAnalysis.StringSyntaxAttribute" Alias="StringSyntax" />
   </ItemGroup>

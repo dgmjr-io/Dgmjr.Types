@@ -9,6 +9,7 @@ namespace System.Diagnostics.CodeAnalysis;
     AllowMultiple = false,
     Inherited = false
 )]
+[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNET70ORGREATER)]
 internal sealed class StringSyntaxAttribute : Attribute
 {
     /// <summary>Initializes the <see cref="StringSyntaxAttribute"/> with the identifier of the syntax used.</summary>
