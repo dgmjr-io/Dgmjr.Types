@@ -1,3 +1,4 @@
+#if !NETSTANDARD2_1_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis;
 
 /// <summary>Specifies that the output will be non-null if the named parameter is non-null.</summary>
@@ -6,7 +7,6 @@ namespace System.Diagnostics.CodeAnalysis;
     AllowMultiple = true,
     Inherited = false
 )]
-[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNETSTANDARD21ORGREATER)]
 public sealed class NotNullIfNotNullAttribute : Attribute
 {
     /// <summary>Initializes the attribute with the associated parameter name.</summary>
@@ -18,3 +18,4 @@ public sealed class NotNullIfNotNullAttribute : Attribute
     /// <summary>Gets the associated parameter name.</summary>
     public string ParameterName { get; }
 }
+#endif

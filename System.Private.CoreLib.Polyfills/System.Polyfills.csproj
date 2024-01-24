@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
+    <Description>This is a **source code only** package that provides several classes that for some reasons aren't provided by .NET.</Description>
+    <!-- <IncludeSourceFilesProjectOutputGroup>false</IncludeSourceFilesProjectOutputGroup> -->
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- <EmbeddedResource Include="Resources/**/*.cs" Pack="true" PackagePath="%(RecursiveDir)%(Filename)%(Extension)" /> -->
+    <!-- <Compile Remove="Resources/**/*.cs" /> -->
+    <!-- <PackageFile Include="./**/*.cs" Except="$(IntermediateOutputPath)**/*.cs" PackagePath="ContentFiles/%(RecursiveDir)%(Filename)%(Extension)" />
+    <PackageFile Include="README.md" PackagePath="%(Filename)%(Extension)" />
+    <PackageFile Remove="$(IntermediateOutputPath)**/*" />
+    <Compile Remove="@(Compile)" /> -->
+  </ItemGroup>
+  <!-- Dont' do this one -->
+  <!-- <Target Name="SourceFilesProjectOutputGroup" /> -->
+</Project>

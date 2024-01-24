@@ -1,3 +1,4 @@
+#if !NET6_0_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis;
 
 [global::System.AttributeUsage(
@@ -15,3 +16,4 @@ public sealed class SetsRequiredMembersAttribute(params string[] members) : Attr
     public SetsRequiredMembersAttribute(string members)
         : this(new[] { members }) { }
 }
+#endif

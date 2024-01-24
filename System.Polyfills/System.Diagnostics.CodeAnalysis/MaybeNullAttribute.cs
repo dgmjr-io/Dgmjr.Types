@@ -1,3 +1,4 @@
+#if !NETSTANDARD2_1_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis;
 
 /// <summary>Specifies that an output may be null even if the corresponding type disallows it.</summary>
@@ -8,5 +9,5 @@ namespace System.Diagnostics.CodeAnalysis;
         | AttributeTargets.ReturnValue,
     Inherited = false
 )]
-[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNETSTANDARD21ORGREATER)]
 public sealed class MaybeNullAttribute : Attribute { }
+#endif

@@ -1,3 +1,5 @@
+#if NET7_0_OR_GREATER
+#else
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
@@ -9,7 +11,6 @@ namespace System.Diagnostics.CodeAnalysis;
     AllowMultiple = false,
     Inherited = false
 )]
-[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNET70ORGREATER)]
 public sealed class StringSyntaxAttribute : Attribute
 {
     /// <summary>Initializes the <see cref="StringSyntaxAttribute"/> with the identifier of the syntax used.</summary>
@@ -71,3 +72,4 @@ public sealed class StringSyntaxAttribute : Attribute
     /// <summary>The syntax identifier for strings containing XML.</summary>
     public const string Xml = nameof(Xml);
 }
+#endif

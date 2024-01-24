@@ -1,3 +1,4 @@
+#if !NET6_0_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis;
 
 /// <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values when returning with the specified return value condition.</summary>
@@ -6,7 +7,6 @@ namespace System.Diagnostics.CodeAnalysis;
     Inherited = false,
     AllowMultiple = true
 )]
-[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNETSTANDARD21ORGREATER)]
 public sealed class MemberNotNullWhenAttribute : Attribute
 {
     /// <summary>Initializes the attribute with the specified return value condition and a field or property member.</summary>
@@ -41,3 +41,4 @@ public sealed class MemberNotNullWhenAttribute : Attribute
     /// <summary>Gets field or property member names.</summary>
     public string[] Members { get; }
 }
+#endif

@@ -1,5 +1,5 @@
 <Project>
-  <PropertyGroup>
+  <!-- <PropertyGroup>
     <DefineConstants Condition="!$(DefineConstants.Contains('NET8_0_OR_GREATER'))">$(DefineConstants);NOTNET80ORGREATER</DefineConstants>
     <DefineConstants Condition="!$(DefineConstants.Contains('NET7_0_OR_GREATER'))">$(DefineConstants);NOTNET70ORGREATER</DefineConstants>
     <DefineConstants Condition="!$(DefineConstants.Contains('NET6_0_OR_GREATER'))">$(DefineConstants);NOTNET60ORGREATER</DefineConstants>
@@ -10,6 +10,6 @@
   <ItemGroup Condition="'$(MSBuildProjectName)' != 'System.Private.CoreLib.Polyfills'">
     <Compile Include="$(MSBuildThisFileDirectory)../ContentFiles/**/*.cs" Link="Polyfills/%(Filename)%(Extension)" Pack="false" />
     <Using Include="System.Runtime.CompilerServices" />
-    <Using Include="System.Diagnostics.CodeAnalysis.StringSyntaxAttribute" Alias="StringSyntax" />
-  </ItemGroup>
+    <Using Include="System.Diagnostics.CodeAnalysis.StringSyntaxAttribute" Alias="StringSyntax" Condition="!$(DefineConstants.Contains('NET7_0_OR_GREATER'))" />
+  </ItemGroup> -->
 </Project>

@@ -1,0 +1,34 @@
+<Project>
+  <PropertyGroup>
+    <DefineConstants Condition="'$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0'  OR '$(TargetFramework)' == 'netstandard2.1' OR '$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);NOTNET80ORGREATER</DefineConstants>
+    <DefineConstants Condition="'$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'netstandard2.1' OR '$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);NOTNET70ORGREATER</DefineConstants>
+    <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.1' OR '$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);NOTNET60ORGREATER</DefineConstants>
+    <DefineConstants Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('$(TargetFramework)', 'net[0-9]+\.[0-9]+'))">$(DefineConstants);NOT_NETSTANDARD</DefineConstants>
+    <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);NOTNETSTANDARD21ORGREATER</DefineConstants>
+    <DefineConstants Condition="$(TargetFramework.StartsWith('netstandard1')) OR $(TargetFramework.StartsWith('netcore'))">$(DefineConstants);NOTNETSTANDARD20ORGREATER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(MSBuildProjectName)' != 'System.Private.CoreLib.Polyfills'">
+    <Using Include="System.Runtime.CompilerServices" />
+    <Using Include="System.Diagnostics.CodeAnalysis.StringSyntaxAttribute" Alias="StringSyntax" Condition="$(DefineConstants.Contains('NOTNET70ORGREATER'))" />
+  </ItemGroup>
+
+  <!-- <UsingTask TaskName="CheckForDuplicateItems" AssemblyFile="$(MicrosoftNETBuildTasksAssembly)" /> -->
+
+  <!-- <Target Name="RemoveSystemPrivateCoreLibFilesFromPackage" BeforeTargets="GetPackageContents;CheckForDuplicateItems">
+    <CheckForDuplicateItems
+      Items="@(Compile)"
+      ItemName="Compile"
+      DefaultItemsEnabled="$(EnableDefaultItems)"
+      DefaultItemsOfThisTypeEnabled="$(EnableDefaultCompileItems)"
+      PropertyNameToDisableDefaultItems="EnableDefaultCompileItems"
+      MoreInformationLink="https://aka.ms/sdkimplicititems/(NETStandard.Library)/Compile"
+      ContinueOnError="true">
+      <Output TaskParameter="DeduplicatedItems" ItemName="DeduplicatedCompileItems" />
+    </CheckForDuplicateItems>
+
+    <ItemGroup>
+      <Compile Remove="@(Compile)" />
+      <Compile Include="@(DeduplicatedCompileItems)" />
+    </ItemGroup>
+  </Target> -->
+</Project>

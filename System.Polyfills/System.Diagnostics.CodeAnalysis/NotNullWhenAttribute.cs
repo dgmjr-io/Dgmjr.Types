@@ -1,8 +1,8 @@
+#if !NETSTANDARD2_1_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis;
 
 /// <summary>Specifies that when a method returns <see cref="ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
 [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
-[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNETSTANDARD21ORGREATER)]
 public sealed class NotNullWhenAttribute : Attribute
 {
     /// <summary>Initializes the attribute with the specified return value condition.</summary>
@@ -14,3 +14,4 @@ public sealed class NotNullWhenAttribute : Attribute
     /// <summary>Gets the return value condition.</summary>
     public bool ReturnValue { get; }
 }
+#endif

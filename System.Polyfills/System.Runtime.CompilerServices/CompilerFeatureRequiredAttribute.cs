@@ -1,10 +1,10 @@
+#if !NET7_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 /// <summary>
 /// Indicates that compiler support for a particular feature is required for the location where this attribute is applied.
 /// </summary>
 [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
-[Conditional(global::System.Private.CoreLib.Polyfills.Constants.NOTNET70ORGREATER)]
 public sealed class CompilerFeatureRequiredAttribute(string? featureName, bool isOptional)
     : Attribute
 {
@@ -34,3 +34,4 @@ public sealed class CompilerFeatureRequiredAttribute(string? featureName, bool i
     /// </summary>
     public bool IsOptional { get; init; } = isOptional;
 }
+#endif
