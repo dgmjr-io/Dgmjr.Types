@@ -54,12 +54,12 @@ namespace System
         /// <summary>
         /// Gets the earliest possible date that can be created.
         /// </summary>
-        public static DateOnly MinValue => new (MinDayNumber);
+        public static DateOnly MinValue => new(MinDayNumber);
 
         /// <summary>
         /// Gets the latest possible date that can be created.
         /// </summary>
-        public static DateOnly MaxValue => new (MaxDayNumber);
+        public static DateOnly MaxValue => new(MaxDayNumber);
 
         /// <summary>
         /// Creates a new instance of the <see cref="DateOnly"/> structure to the specified year, month, and day.
@@ -68,7 +68,7 @@ namespace System
         /// <param name="month">The month (1 through 12).</param>
         /// <param name="day">The day (1 through the number of days in <paramref name="month"/>).</param>
         public DateOnly(int year, int month, int day) =>
-            _dayNumber = DayNumberFromDateTime(new (year, month, day));
+            _dayNumber = DayNumberFromDateTime(new(year, month, day));
 
         /// <summary>
         /// Creates a new instance of the <see cref="DateOnly"/> structure to the specified year, month, and day for the specified calendar.
@@ -78,7 +78,7 @@ namespace System
         /// <param name="day">The day (1 through the number of days in <paramref name="month"/>).</param>
         /// <param name="calendar">The calendar that is used to interpret <paramref name="year"/>, <paramref name="month"/>, and <paramref name="day"/>.</param>
         public DateOnly(int year, int month, int day, Calendar calendar) =>
-            _dayNumber = DayNumberFromDateTime(new (year, month, day, calendar));
+            _dayNumber = DayNumberFromDateTime(new(year, month, day, calendar));
 
         /// <summary>
         /// Creates a new instance of the <see cref="DateOnly"/> structure to the specified number of days.
@@ -160,7 +160,7 @@ namespace System
         /// <returns>An object whose value is the sum of the date represented by this instance
         /// and the number of months represented by <paramref name="value"/>.</returns>
         public DateOnly AddMonths(int value) =>
-            new (DayNumberFromDateTime(GetEquivalentDateTime().AddMonths(value)));
+            new(DayNumberFromDateTime(GetEquivalentDateTime().AddMonths(value)));
 
         /// <summary>
         /// Adds the specified number of years to the value of this instance.
@@ -169,7 +169,7 @@ namespace System
         /// <returns>An object whose value is the sum of the date represented by this instance
         /// and the number of years represented by <paramref name="value"/>.</returns>
         public DateOnly AddYears(int value) =>
-            new (DayNumberFromDateTime(GetEquivalentDateTime().AddYears(value)));
+            new(DayNumberFromDateTime(GetEquivalentDateTime().AddYears(value)));
 
         /// <summary>
         /// Determines whether two specified instances of <see cref="DateOnly"/> are equal.
