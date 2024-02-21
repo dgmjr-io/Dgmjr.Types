@@ -11,27 +11,27 @@ public sealed class CompilerFeatureRequiredAttribute(string? featureName, bool i
     public CompilerFeatureRequiredAttribute(string? featureName)
         : this(featureName, false) { }
 
-    public CompilerFeatureRequiredAttribute()
-        : this(null) { }
+public CompilerFeatureRequiredAttribute()
+    : this(null) { }
 
-    /// <summary>
-    /// The <see cref="FeatureName"/> used for the ref structs C# feature.
-    /// </summary>
-    public const string RefStructs = nameof(RefStructs);
+/// <summary>
+/// The <see cref="FeatureName"/> used for the ref structs C# feature.
+/// </summary>
+public const string RefStructs = nameof(RefStructs);
 
-    /// <summary>
-    /// The <see cref="FeatureName"/> used for the required members C# feature.
-    /// </summary>
-    public const string RequiredMembers = nameof(RequiredMembers);
+/// <summary>
+/// The <see cref="FeatureName"/> used for the required members C# feature.
+/// </summary>
+public const string RequiredMembers = nameof(RequiredMembers);
 
-    /// <summary>
-    /// The name of the compiler feature.
-    /// </summary>
-    public string FeatureName { get; } = featureName;
+/// <summary>
+/// The name of the compiler feature.
+/// </summary>
+public string FeatureName { get; } = featureName;
 
-    /// <summary>
-    /// If <see langword="true" />, the compiler can choose to allow access to the location where this attribute is applied if it does not understand <see cref="FeatureName"/>.
-    /// </summary>
-    public bool IsOptional { get; init; } = isOptional;
+/// <summary>
+/// If <see langword="true" />, the compiler can choose to allow access to the location where this attribute is applied if it does not understand <see cref="FeatureName"/>.
+/// </summary>
+public bool IsOptional { get; init; } = isOptional;
 }
 #endif

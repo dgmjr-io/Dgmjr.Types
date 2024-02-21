@@ -4,4 +4,5 @@
 /// </summary>
 [AttributeUsage(AttributeTargets.Parameter)]
 public // polyfill!
-sealed class ValidatedNotNullAttribute : Attribute { }
+sealed class ValidatedNotNullAttribute : Attribute
+{ }
