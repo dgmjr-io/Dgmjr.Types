@@ -7,10 +7,6 @@
     <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);NOTNETSTANDARD21ORGREATER</DefineConstants>
     <DefineConstants Condition="$(TargetFramework.StartsWith('netstandard1')) OR $(TargetFramework.StartsWith('netcore'))">$(DefineConstants);NOTNETSTANDARD20ORGREATER</DefineConstants>
   </PropertyGroup>
-  <ItemGroup Condition="'$(MSBuildProjectName)' != 'System.Private.CoreLib.Polyfills'">
-    <Using Include="System.Runtime.CompilerServices" />
-    <Using Include="System.Diagnostics.CodeAnalysis.StringSyntaxAttribute" Alias="StringSyntax" Condition="$(DefineConstants.Contains('NOTNET70ORGREATER'))" />
-  </ItemGroup>
 
   <!-- <UsingTask TaskName="CheckForDuplicateItems" AssemblyFile="$(MicrosoftNETBuildTasksAssembly)" /> -->
 

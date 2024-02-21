@@ -400,7 +400,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider = default,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -419,7 +419,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string[] formats
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string[] formats
         ) => ParseExact(s, formats, null, DateTimeStyles.None);
 
         /// <summary>
@@ -436,7 +436,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string[] formats,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string[] formats,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -479,7 +479,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider = default,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -500,7 +500,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string[] formats
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string[] formats
         ) => ParseExact(s, formats, null, DateTimeStyles.None);
 
         /// <summary>
@@ -517,7 +517,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string[] formats,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string[] formats,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -565,7 +565,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string format
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string format
         ) => ParseExact(s, format, null, DateTimeStyles.None);
 
         /// <summary>
@@ -582,7 +582,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string format,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -601,7 +601,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string[] formats
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string[] formats
         ) => ParseExact(s, formats, null, DateTimeStyles.None);
 
         /// <summary>
@@ -618,7 +618,7 @@ namespace System
         /// <exception cref="FormatException"><paramref name="s"/> does not contain a valid string representation of a date.</exception>
         public static DateOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string[] formats,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string[] formats,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -686,7 +686,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] ReadOnlySpan<char> format,
             out DateOnly result
         ) => TryParseExact(s, format, null, DateTimeStyles.None, out result);
 
@@ -707,7 +707,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider,
             DateTimeStyles style,
             out DateOnly result
@@ -731,7 +731,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)]
                 string?[]? formats,
             out DateOnly result
         ) => TryParseExact(s, formats, null, DateTimeStyles.None, out result);
@@ -752,7 +752,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)]
                 string?[]? formats,
             IFormatProvider? provider,
             DateTimeStyles style,
@@ -821,7 +821,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] ReadOnlySpan<char> format,
             out DateOnly result
         ) => TryParseExact(s, format, null, DateTimeStyles.None, out result);
 
@@ -842,7 +842,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider,
             DateTimeStyles style,
             out DateOnly result
@@ -872,7 +872,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)]
                 string?[]? formats,
             out DateOnly result
         ) => TryParseExact(s, formats, null, DateTimeStyles.None, out result);
@@ -893,7 +893,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)]
                 string?[]? formats,
             IFormatProvider? provider,
             DateTimeStyles style,
@@ -963,7 +963,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string? format,
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)] string? format,
             out DateOnly result
         ) => TryParseExact(s, format, null, DateTimeStyles.None, out result);
 
@@ -983,7 +983,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string? format,
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)] string? format,
             IFormatProvider? provider,
             DateTimeStyles style,
             out DateOnly result
@@ -1006,7 +1006,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)]
                 string?[]? formats,
             out DateOnly result
         ) => TryParseExact(s, formats, null, DateTimeStyles.None, out result);
@@ -1026,7 +1026,7 @@ namespace System
         /// otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.DateOnlyFormat)]
                 string?[]? formats,
             IFormatProvider? provider,
             DateTimeStyles style,
@@ -1063,7 +1063,7 @@ namespace System
         /// <param name="format">A standard or custom date format string.</param>
         /// <returns>A string representation of value of the current <see cref="DateOnly"/> object as specified by <paramref name="format"/>.</returns>
         public string ToString(
-            [@StringSyntax(@StringSyntaxAttribute.DateOnlyFormat)] string? format
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string? format
         )
         {
             if (string.IsNullOrEmpty(format))
@@ -1089,7 +1089,7 @@ namespace System
         /// <param name="provider">An object that supplies culture-specific formatting information.</param>
         /// <returns>A string representation of value of the current <see cref="DateOnly"/> object as specified by format and provider.</returns>
         public string ToString(
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)] string? format,
+            [@StringSyntax(StringSyntax.DateOnlyFormat)] string? format,
             IFormatProvider? provider
         )
         {
@@ -1117,7 +1117,7 @@ namespace System
         public bool TryFormat(
             Span<char> destination,
             out int charsWritten,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [@StringSyntax(StringSyntax.DateOnlyFormat)]
                 ReadOnlySpan<char> format = default(ReadOnlySpan<char>),
             IFormatProvider? provider = null
         )
@@ -1144,7 +1144,7 @@ namespace System
         public bool TryFormat(
             Span<char> destination,
             out int charsWritten,
-            [@StringSyntax(StringSyntaxAttribute.DateOnlyFormat)]
+            [@StringSyntax(StringSyntax.DateOnlyFormat)]
                 ReadOnlySpan<char> format = default(ReadOnlySpan<char>),
             IFormatProvider? provider = null
         )

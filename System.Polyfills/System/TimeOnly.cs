@@ -481,7 +481,7 @@ namespace System
         /// as specified by <paramref name="format"/>, <paramref name="provider"/> and <paramref name="style"/>.</returns>
         public static TimeOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider = default,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -499,7 +499,7 @@ namespace System
         /// as specified by one of <paramref name="formats"/>.</returns>
         public static TimeOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string[] formats
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string[] formats
         ) => ParseExact(s, formats, null, DateTimeStyles.None);
 
         /// <summary>
@@ -515,7 +515,7 @@ namespace System
         /// as specified by <paramref name="provider"/>, <paramref name="style"/>, and one of <paramref name="formats"/>.</returns>
         public static TimeOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string[] formats,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string[] formats,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -555,7 +555,7 @@ namespace System
         /// as specified by <paramref name="format"/>, <paramref name="provider"/> and <paramref name="style"/>.</returns>
         public static TimeOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider = default,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -575,7 +575,7 @@ namespace System
         /// as specified by one of <paramref name="formats"/>.</returns>
         public static TimeOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string[] formats
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string[] formats
         ) => ParseExact(s, formats, null, DateTimeStyles.None);
 
         /// <summary>
@@ -591,7 +591,7 @@ namespace System
         /// as specified by <paramref name="provider"/>, <paramref name="style"/>, and one of <paramref name="formats"/>.</returns>
         public static TimeOnly ParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string[] formats,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string[] formats,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -637,7 +637,7 @@ namespace System
         /// as specified by <paramref name="format"/>.</returns>
         public static TimeOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string format
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string format
         ) => ParseExact(s, format, null, DateTimeStyles.None);
 
         /// <summary>
@@ -655,7 +655,7 @@ namespace System
         /// as specified by <paramref name="format"/>, <paramref name="provider"/> and <paramref name="style"/>.</returns>
         public static TimeOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string format,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -673,7 +673,7 @@ namespace System
         /// as specified by one of <paramref name="formats"/>.</returns>
         public static TimeOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string[] formats
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string[] formats
         ) => ParseExact(s, formats, null, DateTimeStyles.None);
 
         /// <summary>
@@ -689,7 +689,7 @@ namespace System
         /// as specified by <paramref name="provider"/>, <paramref name="style"/>, and one of <paramref name="formats"/>.</returns>
         public static TimeOnly ParseExact(
             string s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string[] formats,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string[] formats,
             IFormatProvider? provider,
             DateTimeStyles style = DateTimeStyles.None
         )
@@ -751,7 +751,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] ReadOnlySpan<char> format,
             out TimeOnly result
         ) => TryParseExact(s, format, null, DateTimeStyles.None, out result);
 
@@ -770,7 +770,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider,
             DateTimeStyles style,
             out TimeOnly result
@@ -792,7 +792,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)]
                 string?[]? formats,
             out TimeOnly result
         ) => TryParseExact(s, formats, null, DateTimeStyles.None, out result);
@@ -811,7 +811,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)]
                 string?[]? formats,
             IFormatProvider? provider,
             DateTimeStyles style,
@@ -874,7 +874,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] ReadOnlySpan<char> format,
             out TimeOnly result
         ) => TryParseExact(s, format, null, DateTimeStyles.None, out result);
 
@@ -893,7 +893,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] ReadOnlySpan<char> format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] ReadOnlySpan<char> format,
             IFormatProvider? provider,
             DateTimeStyles style,
             out TimeOnly result
@@ -921,7 +921,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)]
                 string?[]? formats,
             out TimeOnly result
         ) => TryParseExact(s, formats, null, DateTimeStyles.None, out result);
@@ -940,7 +940,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             ReadOnlySpan<char> s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)]
                 string?[]? formats,
             IFormatProvider? provider,
             DateTimeStyles style,
@@ -1007,7 +1007,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string? format,
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)] string? format,
             out TimeOnly result
         ) => TryParseExact(s, format, null, DateTimeStyles.None, out result);
 
@@ -1026,7 +1026,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string? format,
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)] string? format,
             IFormatProvider? provider,
             DateTimeStyles style,
             out TimeOnly result
@@ -1048,7 +1048,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)]
                 string?[]? formats,
             out TimeOnly result
         ) => TryParseExact(s, formats, null, DateTimeStyles.None, out result);
@@ -1067,7 +1067,7 @@ namespace System
         /// <returns><see langword="true"/> if the <paramref name="s"/> parameter was converted successfully; otherwise, <see langword="false"/>.</returns>
         public static bool TryParseExact(
             [NotNullWhen(true)] string? s,
-            [NotNullWhen(true), @StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [NotNullWhen(true), @StringSyntax(StringSyntax.TimeOnlyFormat)]
                 string?[]? formats,
             IFormatProvider? provider,
             DateTimeStyles style,
@@ -1104,7 +1104,7 @@ namespace System
         /// <param name="format">A standard or custom time format string.</param>
         /// <returns>A string representation of value of the current <see cref="TimeOnly"/> object as specified by <paramref name="format"/>.</returns>
         /// <remarks>The accepted standard formats are 'r', 'R', 'o', 'O', 't' and 'T'. </remarks>
-        public string ToString([@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string? format)
+        public string ToString([@StringSyntax(StringSyntax.TimeOnlyFormat)] string? format)
         {
             if (string.IsNullOrEmpty(format))
             {
@@ -1131,7 +1131,7 @@ namespace System
         /// as specified by <paramref name="format"/> and <paramref name="provider"/>.</returns>
         /// <remarks>The accepted standard formats are 'r', 'R', 'o', 'O', 't' and 'T'. </remarks>
         public string ToString(
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)] string? format,
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)] string? format,
             IFormatProvider? provider
         )
         {
@@ -1160,7 +1160,7 @@ namespace System
         public bool TryFormat(
             Span<char> destination,
             out int charsWritten,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)]
                 ReadOnlySpan<char> format = default(ReadOnlySpan<char>),
             IFormatProvider? provider = null
         )
@@ -1187,7 +1187,7 @@ namespace System
         public bool TryFormat(
             Span<char> destination,
             out int charsWritten,
-            [@StringSyntax(StringSyntaxAttribute.TimeOnlyFormat)]
+            [@StringSyntax(StringSyntax.TimeOnlyFormat)]
                 ReadOnlySpan<char> format = default(ReadOnlySpan<char>),
             IFormatProvider? provider = null
         )
