@@ -10,11 +10,11 @@ public sealed class SetsRequiredMembersAttribute(params string[] members) : Attr
 {
     public string[] Members { get; } = members;
 
-    public SetsRequiredMembersAttribute()
-        : this(null as string[]) { }
+public SetsRequiredMembersAttribute()
+    : this(null as string[]) { }
 
-    public SetsRequiredMembersAttribute(string members)
-        : this(new[] { members }) { }
+public SetsRequiredMembersAttribute(string members)
+    : this(new[] { members }) { }
 }
 #else
 [assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.SetsRequiredMembersAttribute))]
