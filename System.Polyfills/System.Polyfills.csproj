@@ -1,7 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
-    <Description>This is a **source code only** package that provides several classes that for some reasons aren't provided by .NET.</Description>
-    <DefineConstants>$(DefineConstants);POLYKIT_PUBLIC</DefineConstants>
+    <Description>This is a package that provides several classes that for some reasons aren't provided by .NET.</Description>
+    <DefineConstants>$(DefineConstants);POLYKIT_PUBLIC;POLYKIT_USE_VALUETUPLE</DefineConstants>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Condition="!$(DefineConstants.Contains('NETSTANDARD2_1_OR_GREATER'))" />
+  </ItemGroup>
 </Project>

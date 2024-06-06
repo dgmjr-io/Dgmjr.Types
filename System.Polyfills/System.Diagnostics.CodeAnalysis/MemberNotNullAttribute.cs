@@ -1,4 +1,4 @@
-#if !NETSTANDARD2_1_OR_GREATER
+#if !NETSTANDARD2_0_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis;
 
 /// <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values.</summary>
@@ -7,7 +7,6 @@ namespace System.Diagnostics.CodeAnalysis;
     Inherited = false,
     AllowMultiple = true
 )]
-[Conditional(global::System.Polyfills.Constants.NOTNETSTANDARD21ORGREATER)]
 public sealed class MemberNotNullAttribute : Attribute
 {
     /// <summary>Initializes the attribute with a field or property member.</summary>
@@ -25,4 +24,6 @@ public sealed class MemberNotNullAttribute : Attribute
     /// <summary>Gets field or property member names.</summary>
     public string[] Members { get; }
 }
+#else
+// [assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.MemberNotNullAttribute))]
 #endif

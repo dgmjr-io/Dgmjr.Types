@@ -11,4 +11,8 @@ namespace System.Runtime.CompilerServices;
     Inherited = false
 )]
 public sealed class RequiredMemberAttribute : Attribute { }
+#else
+[assembly: System.Runtime.CompilerServices.TypeForwardedTo(
+    typeof(System.Runtime.CompilerServices.RequiredMemberAttribute)
+)]
 #endif

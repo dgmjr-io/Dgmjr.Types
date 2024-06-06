@@ -10,4 +10,6 @@ namespace System.Diagnostics.CodeAnalysis;
     Inherited = false
 )]
 public sealed class MaybeNullAttribute : Attribute { }
+#else
+[assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.MaybeNullAttribute))]
 #endif

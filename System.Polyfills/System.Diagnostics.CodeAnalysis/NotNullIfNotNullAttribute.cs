@@ -18,4 +18,6 @@ public sealed class NotNullIfNotNullAttribute : Attribute
     /// <summary>Gets the associated parameter name.</summary>
     public string ParameterName { get; }
 }
+#else
+[assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute))]
 #endif

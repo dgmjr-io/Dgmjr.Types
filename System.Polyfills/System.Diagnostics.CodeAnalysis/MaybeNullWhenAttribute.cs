@@ -14,4 +14,6 @@ public sealed class MaybeNullWhenAttribute : Attribute
     /// <summary>Gets the return value condition.</summary>
     public bool ReturnValue { get; }
 }
+#else
+[assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute))]
 #endif

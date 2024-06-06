@@ -41,4 +41,6 @@ public sealed class MemberNotNullWhenAttribute : Attribute
     /// <summary>Gets field or property member names.</summary>
     public string[] Members { get; }
 }
+#else
+[assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute))]
 #endif

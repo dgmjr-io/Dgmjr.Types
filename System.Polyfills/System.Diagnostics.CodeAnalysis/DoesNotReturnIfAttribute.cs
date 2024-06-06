@@ -15,4 +15,6 @@ public sealed class DoesNotReturnIfAttribute : Attribute
     /// <summary>Gets the condition parameter value.</summary>
     public bool ParameterValue { get; }
 }
+#else
+[assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute))]
 #endif

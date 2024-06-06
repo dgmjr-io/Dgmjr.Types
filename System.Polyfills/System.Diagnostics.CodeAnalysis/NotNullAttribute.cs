@@ -25,4 +25,6 @@ public sealed class NotNullAttribute() : Attribute
     /// </summary>
     public bool ReturnValue { get; }
 }
+#else
+[assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.NotNullAttribute))]
 #endif

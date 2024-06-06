@@ -34,4 +34,8 @@ public sealed class CompilerFeatureRequiredAttribute(string? featureName, bool i
     /// </summary>
     public bool IsOptional { get; init; } = isOptional;
 }
+#else
+[assembly: TypeForwardedTo(
+    typeof(System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute)
+)]
 #endif

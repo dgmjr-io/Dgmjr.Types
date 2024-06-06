@@ -7,4 +7,6 @@ namespace System.Diagnostics.CodeAnalysis;
     Inherited = false
 )]
 public sealed class AllowNullAttribute : Attribute { }
+#else
+[assembly: TypeForwardedTo(typeof(System.Diagnostics.CodeAnalysis.AllowNullAttribute))]
 #endif
