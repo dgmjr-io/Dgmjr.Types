@@ -1,12 +1,12 @@
 {
-    "dotnet.defaultSolution": "Abstractions/Dgmjr.Abstractions.sln",
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#5B1207",
-        "titleBar.activeBackground": "#80190A",
-        "titleBar.activeForeground": "#FFFCFB"
-    },
-    "sonarlint.connectedMode.project": {
-        "connectionId": "dgmjr-io",
-        "projectKey": "dgmjr-io_Dgmjr.Types"
-    }
+  "dotnet.defaultSolution": "Abstractions/Dgmjr.Abstractions.sln",
+  "sonarlint.connectedMode.project": {
+    "connectionId": "dgmjr-io",
+    "projectKey": "dgmjr-io_Dgmjr.Types"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#5B1207",
+    "titleBar.activeBackground": "#80190A",
+    "titleBar.activeForeground": "#FFFCFB"
+  }
 }
