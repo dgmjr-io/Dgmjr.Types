@@ -6,7 +6,7 @@ namespace System.Diagnostics.CodeAnalysis
     public sealed class RequiresUnreferencedCodeAttribute(string message) : Attribute
     {
         public string Message => message;
-    }
+}
 }
 #else
 [assembly: TypeForwardedTo(
